@@ -112,11 +112,6 @@ offset_right = 783.0
 offset_bottom = 317.0
 text = "Delete Savefile"
 
-[node name="CheckButton" type="CheckButton" parent="."]
-layout_mode = 0
-offset_right = 44.0
-offset_bottom = 24.0
-
 [node name="confirm_delete" type="Button" parent="."]
 visible = false
 layout_mode = 0
