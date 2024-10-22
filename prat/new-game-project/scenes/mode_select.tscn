@@ -54,7 +54,7 @@ text = "Direction"
 custom_minimum_size = Vector2(150, 0)
 layout_mode = 2
 theme_override_font_sizes/font_size = 30
-text = "Time Travel"
+text = "Commits"
 
 [node name="Story4" type="Button" parent="VBoxContainer/beginnerhbox"]
 custom_minimum_size = Vector2(150, 0)
@@ -63,15 +63,76 @@ theme_override_font_sizes/font_size = 30
 text = "Branches
 "
 
-[node name="Button2" type="Button" parent="VBoxContainer"]
+[node name="intermediatehbox" type="HBoxContainer" parent="VBoxContainer"]
+layout_direction = 2
 layout_mode = 2
 size_flags_vertical = 3
+size_flags_stretch_ratio = 0.78
+theme_override_constants/separation = 100
+
+[node name="intermediate_button" type="Button" parent="VBoxContainer/intermediatehbox"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
 text = "Intermediate"
 
-[node name="Button3" type="Button" parent="VBoxContainer"]
+[node name="merging" type="Button" parent="VBoxContainer/intermediatehbox"]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "Story
+"
+
+[node name="restoring and adding" type="Button" parent="VBoxContainer/intermediatehbox"]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "Branches
+"
+
+[node name="ignore_exclude" type="Button" parent="VBoxContainer/intermediatehbox"]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "Direction"
+
+[node name="cherrypick" type="Button" parent="VBoxContainer/intermediatehbox"]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "Commits"
+
+[node name="advancedhbox" type="HBoxContainer" parent="VBoxContainer"]
+layout_direction = 2
 layout_mode = 2
 size_flags_vertical = 3
+size_flags_stretch_ratio = 0.78
+theme_override_constants/separation = 100
+
+[node name="advanced_button" type="Button" parent="VBoxContainer/advancedhbox"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
 text = "Advanced"
+
+[node name="squash" type="Button" parent="VBoxContainer/advancedhbox"]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "Story
+"
+
+[node name="rebmergsquash" type="Button" parent="VBoxContainer/advancedhbox"]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "Direction"
+
+[node name="deletion" type="Button" parent="VBoxContainer/advancedhbox"]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "Commits"
 
 [node name="returntomain" type="Button" parent="."]
 layout_mode = 1
