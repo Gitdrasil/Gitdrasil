@@ -1,4 +1,4 @@
-[gd_scene load_steps=2 format=3 uid="uid://cfmvfalvw6u7e"]
+[gd_scene load_steps=2 format=3 uid="uid://djp6oldx6453n"]
 
 [sub_resource type="GDScript" id="GDScript_kf8bt"]
 resource_name = "music_slider"
@@ -13,8 +13,6 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	pass
-
-
 "
 
 [node name="volumeslider" type="HSlider"]

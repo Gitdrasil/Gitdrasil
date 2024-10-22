@@ -52,7 +52,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = SubResource("GDScript_6vmjy")
 
-[node name="Button" type="Button" parent="."]
+[node name="returntomain" type="Button" parent="."]
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
@@ -126,6 +126,6 @@ offset_right = 992.0
 offset_bottom = 320.0
 text = "Confirm Deletion"
 
-[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="returntomain" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="musictest" to="musictest" method="_on_pressed"]
 [connection signal="pressed" from="delete_savefile" to="." method="_on_delete_savefile_pressed"]
