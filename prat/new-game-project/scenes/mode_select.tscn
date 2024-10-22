@@ -1,4 +1,26 @@
-[gd_scene format=3 uid="uid://cx45qjlrbwsw0"]
+[gd_scene load_steps=2 format=3 uid="uid://cx45qjlrbwsw0"]
+
+[sub_resource type="GDScript" id="GDScript_r4mvu"]
+script/source = "extends Control
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	pass
+
+
+func _on_edges_pressed():
+	pass # Replace with function body.
+
+
+func _on_returntomain_pressed():
+	get_tree().change_scene_to_file(\"res://scenes/main_menu.tscn\")
+"
 
 [node name="mode_select" type="Control"]
 layout_mode = 3
@@ -11,16 +33,17 @@ offset_right = 1.0
 offset_bottom = -26.0
 grow_horizontal = 2
 grow_vertical = 2
+script = SubResource("GDScript_r4mvu")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -581.0
-offset_top = 125.0
-offset_right = 749.0
-offset_bottom = 660.0
+offset_left = -633.0
+offset_top = 115.0
+offset_right = 697.0
+offset_bottom = 650.0
 grow_horizontal = 2
 theme_override_constants/separation = 130
 
@@ -37,19 +60,19 @@ layout_mode = 2
 theme_override_font_sizes/font_size = 30
 text = "The Story"
 
-[node name="Commits" type="Button" parent="VBoxContainer/beginnerhbox"]
+[node name="Edges" type="Button" parent="VBoxContainer/beginnerhbox"]
 custom_minimum_size = Vector2(150, 0)
 layout_mode = 2
 theme_override_font_sizes/font_size = 30
 text = "Git Edges"
 
-[node name="Story3" type="Button" parent="VBoxContainer/beginnerhbox"]
+[node name="Commits" type="Button" parent="VBoxContainer/beginnerhbox"]
 custom_minimum_size = Vector2(200, 0)
 layout_mode = 2
 theme_override_font_sizes/font_size = 30
 text = "Commits"
 
-[node name="Story4" type="Button" parent="VBoxContainer/beginnerhbox"]
+[node name="Branches" type="Button" parent="VBoxContainer/beginnerhbox"]
 custom_minimum_size = Vector2(200, 0)
 layout_mode = 2
 theme_override_font_sizes/font_size = 30
@@ -126,10 +149,10 @@ text = "Return"
 
 [node name="diffvcontainer" type="VBoxContainer" parent="."]
 layout_mode = 0
-offset_left = 76.0
-offset_top = -33.0
-offset_right = 278.0
-offset_bottom = 660.0
+offset_left = 19.0
+offset_top = -48.0
+offset_right = 221.0
+offset_bottom = 645.0
 theme_override_constants/separation = 180
 alignment = 1
 
@@ -148,3 +171,6 @@ layout_mode = 2
 theme_override_font_sizes/font_size = 32
 text = "Advanced
 "
+
+[connection signal="pressed" from="VBoxContainer/beginnerhbox/Edges" to="." method="_on_edges_pressed"]
+[connection signal="pressed" from="returntomain" to="." method="_on_returntomain_pressed"]

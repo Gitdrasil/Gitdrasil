@@ -1,0 +1,72 @@
+[gd_scene load_steps=2 format=3 uid="uid://bmh0bltltnyqh"]
+
+[sub_resource type="GDScript" id="GDScript_lbk3c"]
+script/source = "extends Control
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	pass
+
+
+func _on_return_pressed():
+	get_tree().change_scene_to_file(\"res://scenes/mode_select.tscn\")
+
+
+func _on_options_pressed():
+	pass # Replace with function body.
+
+
+func _on_moreinfo_pressed():
+	pass # Replace with function body.
+"
+
+[node name="edges" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = SubResource("GDScript_lbk3c")
+
+[node name="RESET" type="Button" parent="."]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 12.0
+offset_right = 114.0
+offset_bottom = 67.0
+theme_override_font_sizes/font_size = 34
+text = "RESET"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 1265.0
+offset_top = 686.0
+offset_right = 1424.0
+offset_bottom = 886.0
+theme_override_constants/separation = 20
+
+[node name="moreinfo" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "More Info"
+
+[node name="options" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "Options"
+
+[node name="return" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "Return"
+
+[connection signal="pressed" from="VBoxContainer/moreinfo" to="." method="_on_moreinfo_pressed"]
+[connection signal="pressed" from="VBoxContainer/options" to="." method="_on_options_pressed"]
+[connection signal="pressed" from="VBoxContainer/return" to="." method="_on_return_pressed"]
