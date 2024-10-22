@@ -112,6 +112,12 @@ size_flags_vertical = 3
 size_flags_stretch_ratio = 0.78
 theme_override_constants/separation = 100
 
+[node name="deletion" type="Button" parent="VBoxContainer/advancedhbox"]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "Commit Deletion"
+
 [node name="squash" type="Button" parent="VBoxContainer/advancedhbox"]
 custom_minimum_size = Vector2(200, 0)
 layout_mode = 2
@@ -124,12 +130,6 @@ custom_minimum_size = Vector2(150, 0)
 layout_mode = 2
 theme_override_font_sizes/font_size = 30
 text = "Choosing Rebase, Merge, or Squash"
-
-[node name="deletion" type="Button" parent="VBoxContainer/advancedhbox"]
-custom_minimum_size = Vector2(300, 0)
-layout_mode = 2
-theme_override_font_sizes/font_size = 30
-text = "Commit Deletion"
 
 [node name="returntomain" type="Button" parent="."]
 layout_mode = 1
