@@ -17,10 +17,10 @@ layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -665.0
-offset_top = 90.0
-offset_right = 665.0
-offset_bottom = 535.0
+offset_left = -581.0
+offset_top = 134.0
+offset_right = 749.0
+offset_bottom = 579.0
 grow_horizontal = 2
 theme_override_constants/separation = 100
 
@@ -30,12 +30,6 @@ layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 0.78
 theme_override_constants/separation = 100
-
-[node name="beginner_mode" type="Button" parent="VBoxContainer/beginnerhbox"]
-custom_minimum_size = Vector2(200, 0)
-layout_mode = 2
-theme_override_font_sizes/font_size = 30
-text = "Beginner"
 
 [node name="Story" type="Button" parent="VBoxContainer/beginnerhbox"]
 custom_minimum_size = Vector2(150, 0)
@@ -70,37 +64,24 @@ size_flags_vertical = 3
 size_flags_stretch_ratio = 0.78
 theme_override_constants/separation = 100
 
-[node name="intermediate_button" type="Button" parent="VBoxContainer/intermediatehbox"]
-custom_minimum_size = Vector2(200, 0)
-layout_mode = 2
-theme_override_font_sizes/font_size = 30
-text = "Intermediate"
-
 [node name="merging" type="Button" parent="VBoxContainer/intermediatehbox"]
 custom_minimum_size = Vector2(150, 0)
 layout_mode = 2
 theme_override_font_sizes/font_size = 30
-text = "Story
-"
+text = "Merging"
 
-[node name="restoring and adding" type="Button" parent="VBoxContainer/intermediatehbox"]
+[node name="restore_add" type="Button" parent="VBoxContainer/intermediatehbox"]
 custom_minimum_size = Vector2(150, 0)
 layout_mode = 2
 theme_override_font_sizes/font_size = 30
-text = "Branches
+text = "Add/Restore
 "
 
 [node name="ignore_exclude" type="Button" parent="VBoxContainer/intermediatehbox"]
 custom_minimum_size = Vector2(150, 0)
 layout_mode = 2
 theme_override_font_sizes/font_size = 30
-text = "Direction"
-
-[node name="cherrypick" type="Button" parent="VBoxContainer/intermediatehbox"]
-custom_minimum_size = Vector2(150, 0)
-layout_mode = 2
-theme_override_font_sizes/font_size = 30
-text = "Commits"
+text = "Ignore/Exclude"
 
 [node name="advancedhbox" type="HBoxContainer" parent="VBoxContainer"]
 layout_direction = 2
@@ -109,30 +90,24 @@ size_flags_vertical = 3
 size_flags_stretch_ratio = 0.78
 theme_override_constants/separation = 100
 
-[node name="advanced_button" type="Button" parent="VBoxContainer/advancedhbox"]
-custom_minimum_size = Vector2(200, 0)
-layout_mode = 2
-theme_override_font_sizes/font_size = 30
-text = "Advanced"
-
 [node name="squash" type="Button" parent="VBoxContainer/advancedhbox"]
 custom_minimum_size = Vector2(150, 0)
 layout_mode = 2
 theme_override_font_sizes/font_size = 30
-text = "Story
+text = "Squashing
 "
 
 [node name="rebmergsquash" type="Button" parent="VBoxContainer/advancedhbox"]
 custom_minimum_size = Vector2(150, 0)
 layout_mode = 2
 theme_override_font_sizes/font_size = 30
-text = "Direction"
+text = "Choosing Rebase, Merge, or Squash"
 
 [node name="deletion" type="Button" parent="VBoxContainer/advancedhbox"]
 custom_minimum_size = Vector2(150, 0)
 layout_mode = 2
 theme_override_font_sizes/font_size = 30
-text = "Commits"
+text = "Commit Deletion"
 
 [node name="returntomain" type="Button" parent="."]
 layout_mode = 1
@@ -142,9 +117,9 @@ anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
 offset_left = -112.0
-offset_top = -129.0
+offset_top = -91.0
 offset_right = 112.0
-offset_bottom = -52.0
+offset_bottom = -14.0
 grow_horizontal = 2
 grow_vertical = 0
 theme_override_font_sizes/font_size = 28
@@ -156,3 +131,27 @@ offset_left = 356.0
 offset_top = 621.0
 offset_right = 1082.0
 offset_bottom = 756.0
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 76.0
+offset_top = 75.0
+offset_right = 278.0
+offset_bottom = 768.0
+theme_override_constants/separation = 140
+
+[node name="Label2" type="Label" parent="VBoxContainer2"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "Beginner"
+
+[node name="Label3" type="Label" parent="VBoxContainer2"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "Intermediate"
+
+[node name="Label4" type="Label" parent="VBoxContainer2"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "Advanced
+"
