@@ -5,21 +5,63 @@ layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 1.0
+offset_top = -26.0
+offset_right = 1.0
+offset_bottom = -26.0
 grow_horizontal = 2
 grow_vertical = 2
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
-layout_mode = 0
-offset_left = 83.0
-offset_top = 80.0
-offset_right = 264.0
-offset_bottom = 588.0
-theme_override_constants/separation = 150
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -665.0
+offset_top = 90.0
+offset_right = 665.0
+offset_bottom = 535.0
+grow_horizontal = 2
+theme_override_constants/separation = 100
 
-[node name="Button" type="Button" parent="VBoxContainer"]
+[node name="beginnerhbox" type="HBoxContainer" parent="VBoxContainer"]
+layout_direction = 2
 layout_mode = 2
 size_flags_vertical = 3
+size_flags_stretch_ratio = 0.78
+theme_override_constants/separation = 100
+
+[node name="beginner_mode" type="Button" parent="VBoxContainer/beginnerhbox"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
 text = "Beginner"
+
+[node name="Story" type="Button" parent="VBoxContainer/beginnerhbox"]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "Story
+"
+
+[node name="Commits" type="Button" parent="VBoxContainer/beginnerhbox"]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "Direction"
+
+[node name="Story3" type="Button" parent="VBoxContainer/beginnerhbox"]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "Time Travel"
+
+[node name="Story4" type="Button" parent="VBoxContainer/beginnerhbox"]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "Branches
+"
 
 [node name="Button2" type="Button" parent="VBoxContainer"]
 layout_mode = 2
@@ -30,9 +72,6 @@ text = "Intermediate"
 layout_mode = 2
 size_flags_vertical = 3
 text = "Advanced"
-
-[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
-layout_mode = 2
 
 [node name="returntomain" type="Button" parent="."]
 layout_mode = 1
