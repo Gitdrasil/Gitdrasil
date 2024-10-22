@@ -1,0 +1,27 @@
+[gd_scene load_steps=2 format=3 uid="uid://cfmvfalvw6u7e"]
+
+[sub_resource type="GDScript" id="GDScript_kf8bt"]
+resource_name = "music_slider"
+script/source = "extends HSlider
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	pass
+
+
+"
+
+[node name="volumeslider" type="HSlider"]
+offset_right = 8.0
+offset_bottom = 16.0
+max_value = 1.0
+step = 0.001
+script = SubResource("GDScript_kf8bt")
+
+[connection signal="value_changed" from="." to="." method="_on_value_changed"]
