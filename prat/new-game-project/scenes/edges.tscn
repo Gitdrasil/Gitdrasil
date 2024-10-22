@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://bmh0bltltnyqh"]
+[gd_scene load_steps=7 format=3 uid="uid://bmh0bltltnyqh"]
 
 [ext_resource type="AudioStream" uid="uid://bexlfsp78porn" path="res://audio/mrticklechops1.mp3" id="1_vck5d"]
 [ext_resource type="Texture2D" uid="uid://b6exwdst0tf34" path="res://characters/elephant-7931673_1280.png" id="2_ektet"]
 [ext_resource type="Texture2D" uid="uid://ygn52gf1jwbi" path="res://characters/cat-1390342_640.png" id="3_ba6mn"]
+[ext_resource type="Texture2D" uid="uid://d3w2fnntwfhdk" path="res://image editing/edgemockup.png" id="4_j0d3d"]
 
 [sub_resource type="GDScript" id="GDScript_lbk3c"]
 script/source = "extends Control
@@ -30,6 +31,9 @@ func _on_moreinfo_pressed():
 	pass # Replace with function body.
 "
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4gri8"]
+bg_color = Color(1, 1, 1, 1)
+
 [node name="edges" type="Control"]
 layout_mode = 3
 anchors_preset = 15
@@ -38,6 +42,15 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = SubResource("GDScript_lbk3c")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_4gri8")
 
 [node name="RESET" type="Button" parent="."]
 layout_mode = 0
@@ -82,7 +95,7 @@ texture = ExtResource("2_ektet")
 flip_h = true
 
 [node name="Cat-1390342640" type="Sprite2D" parent="."]
-position = Vector2(1358, 599)
+position = Vector2(1366, 647)
 scale = Vector2(0.216846, 0.216846)
 texture = ExtResource("3_ba6mn")
 flip_h = true
@@ -90,13 +103,30 @@ flip_h = true
 [node name="edge_instruction" type="Label" parent="."]
 layout_mode = 2
 offset_left = 26.0
-offset_top = 510.0
+offset_top = 567.0
 offset_right = 1314.0
-offset_bottom = 549.0
+offset_bottom = 638.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 24
-text = "Solid circles represent commits. Commits can be seen as save points in our work. They point to their parent.
+text = "Solid circles represent commits. Commits can be seen as save points in our work. They point to their parents.
+Click on an unfilled circle, then drag to its parent to create a commit.
 
 "
+
+[node name="Edgemockup" type="Sprite2D" parent="."]
+position = Vector2(680, 461)
+texture = ExtResource("4_j0d3d")
+
+[node name="edge_instruction2" type="Label" parent="."]
+offset_left = 717.0
+offset_top = 347.0
+offset_right = 952.0
+offset_bottom = 418.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 18
+text = "The stone HEAD is
+your location"
+horizontal_alignment = 1
 
 [connection signal="pressed" from="VBoxContainer/return" to="." method="_on_return_pressed"]
 [connection signal="pressed" from="VBoxContainer/options" to="." method="_on_options_pressed"]

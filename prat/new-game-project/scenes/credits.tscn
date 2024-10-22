@@ -72,6 +72,21 @@ text = "Cat Art: Ichigo_jam"
 underline = 1
 uri = "https://pixabay.com/illustrations/cat-panda-1390342/"
 
+[node name="LinkButton4" type="LinkButton" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -309.0
+offset_top = 295.0
+offset_right = 312.0
+offset_bottom = 337.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 30
+text = "Stone Heads: Silver Stone Handcrafted"
+underline = 1
+uri = "https://www.silverstonehandcrafted.com/sandblasted-stones"
+
 [node name="Button" type="Button" parent="."]
 layout_mode = 1
 anchors_preset = 7
