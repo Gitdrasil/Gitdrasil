@@ -39,7 +39,38 @@ offset_bottom = 128.0
 grow_horizontal = 2
 theme_override_font_sizes/font_size = 30
 text = "Music: MrTickleChops (click to view source)"
+underline = 1
 uri = "https://www.tiktok.com/@mrticklechops/video/7414129826417757473"
+
+[node name="LinkButton2" type="LinkButton" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -308.0
+offset_top = 153.0
+offset_right = 313.0
+offset_bottom = 195.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 30
+text = "Elephant Art: Terranaut"
+underline = 1
+uri = "https://pixabay.com/illustrations/elephant-baby-elephant-cute-7931673/"
+
+[node name="LinkButton3" type="LinkButton" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -308.0
+offset_top = 226.0
+offset_right = 313.0
+offset_bottom = 268.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 30
+text = "Cat Art: Ichigo_jam"
+underline = 1
+uri = "https://pixabay.com/illustrations/cat-panda-1390342/"
 
 [node name="Button" type="Button" parent="."]
 layout_mode = 1

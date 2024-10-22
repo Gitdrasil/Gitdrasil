@@ -1,4 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://bmh0bltltnyqh"]
+[gd_scene load_steps=5 format=3 uid="uid://bmh0bltltnyqh"]
+
+[ext_resource type="AudioStream" uid="uid://bexlfsp78porn" path="res://audio/mrticklechops1.mp3" id="1_vck5d"]
+[ext_resource type="Texture2D" uid="uid://b6exwdst0tf34" path="res://characters/elephant-7931673_1280.png" id="2_ektet"]
+[ext_resource type="Texture2D" uid="uid://ygn52gf1jwbi" path="res://characters/cat-1390342_640.png" id="3_ba6mn"]
 
 [sub_resource type="GDScript" id="GDScript_lbk3c"]
 script/source = "extends Control
@@ -6,7 +10,7 @@ script/source = "extends Control
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	$AudioStreamPlayer.play()
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -19,7 +23,7 @@ func _on_return_pressed():
 
 
 func _on_options_pressed():
-	pass # Replace with function body.
+	get_tree().change_scene_to_file(\"res://scenes/options.tscn\")
 
 
 func _on_moreinfo_pressed():
@@ -37,36 +41,63 @@ script = SubResource("GDScript_lbk3c")
 
 [node name="RESET" type="Button" parent="."]
 layout_mode = 0
-offset_left = 8.0
-offset_top = 12.0
-offset_right = 114.0
-offset_bottom = 67.0
+offset_left = 1294.0
+offset_top = 31.0
+offset_right = 1400.0
+offset_bottom = 86.0
 theme_override_font_sizes/font_size = 34
 text = "RESET"
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 0
-offset_left = 1265.0
-offset_top = 686.0
-offset_right = 1424.0
-offset_bottom = 886.0
+offset_left = 19.0
+offset_top = 18.0
+offset_right = 178.0
+offset_bottom = 218.0
 theme_override_constants/separation = 20
-
-[node name="moreinfo" type="Button" parent="VBoxContainer"]
-layout_mode = 2
-theme_override_font_sizes/font_size = 32
-text = "More Info"
-
-[node name="options" type="Button" parent="VBoxContainer"]
-layout_mode = 2
-theme_override_font_sizes/font_size = 32
-text = "Options"
 
 [node name="return" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 32
 text = "Return"
 
-[connection signal="pressed" from="VBoxContainer/moreinfo" to="." method="_on_moreinfo_pressed"]
-[connection signal="pressed" from="VBoxContainer/options" to="." method="_on_options_pressed"]
+[node name="options" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "Options"
+
+[node name="moreinfo" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "More Info"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("1_vck5d")
+bus = &"music"
+
+[node name="Elephant-79316731280" type="Sprite2D" parent="."]
+position = Vector2(129.652, 785.875)
+scale = Vector2(0.148186, 0.148186)
+texture = ExtResource("2_ektet")
+flip_h = true
+
+[node name="Cat-1390342640" type="Sprite2D" parent="."]
+position = Vector2(1358, 599)
+scale = Vector2(0.216846, 0.216846)
+texture = ExtResource("3_ba6mn")
+flip_h = true
+
+[node name="edge_instruction" type="Label" parent="."]
+layout_mode = 2
+offset_left = 26.0
+offset_top = 510.0
+offset_right = 1314.0
+offset_bottom = 549.0
+theme_override_font_sizes/font_size = 24
+text = "Solid circles represent commits. Commits can be seen as save points in our work. They point to their parent.
+
+"
+
 [connection signal="pressed" from="VBoxContainer/return" to="." method="_on_return_pressed"]
+[connection signal="pressed" from="VBoxContainer/options" to="." method="_on_options_pressed"]
+[connection signal="pressed" from="VBoxContainer/moreinfo" to="." method="_on_moreinfo_pressed"]
