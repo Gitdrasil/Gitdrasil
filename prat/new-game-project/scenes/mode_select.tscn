@@ -125,11 +125,11 @@ theme_override_font_sizes/font_size = 30
 text = "Squashing
 "
 
-[node name="rebmergsquash" type="Button" parent="VBoxContainer/advancedhbox"]
+[node name="detatchedHEAD" type="Button" parent="VBoxContainer/advancedhbox"]
 custom_minimum_size = Vector2(150, 0)
 layout_mode = 2
 theme_override_font_sizes/font_size = 30
-text = "Choosing Rebase, Merge, or Squash"
+text = "Detatched HEAD"
 
 [node name="returntomain" type="Button" parent="."]
 layout_mode = 1
